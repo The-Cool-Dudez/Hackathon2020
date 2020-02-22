@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public void onClick(View v)
     {
@@ -70,9 +71,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.btnConnect:
                 startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                buttonConnect.setText("Connected");
+                buttonConnect.setEnabled(false);
                 break;
             case R.id.btnUpload:
-                buttonUpload.setText("LULZ");
                 break;
         }
     }
