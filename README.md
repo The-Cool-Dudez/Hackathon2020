@@ -1,4 +1,6 @@
 # Hackathon2020
+# USI Hackathon2020 2/22/20
+# Jake, Sutton, Zach, Jeremey
 
 Project 3 - Eventful Technologies
 
