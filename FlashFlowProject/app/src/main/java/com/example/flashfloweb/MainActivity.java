@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnConnect:
+                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connecting...");
                 try
                 {
@@ -76,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 catch(InterruptedException e)
                 {}
-                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connected");
                 buttonConnect.setEnabled(false);
                 buttonUpload.setEnabled(true);
