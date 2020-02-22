@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnConnect:
+                buttonConnect.setText("Connecting...");
                 startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
                 buttonConnect.setText("Connected");
                 buttonConnect.setEnabled(false);
