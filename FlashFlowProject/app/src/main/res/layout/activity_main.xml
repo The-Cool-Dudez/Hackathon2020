@@ -18,18 +18,18 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:textAlignment="center"
+            android:visibility="gone"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Body2">
-
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium">
 
 
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24dp"
                 android:layout_gravity="center"
-                android:text="Flash Flow Image Utility" />
+                android:text="Flash Flow Image Utility"
+                android:textSize="24dp" />
 
 
         </androidx.appcompat.widget.Toolbar>
