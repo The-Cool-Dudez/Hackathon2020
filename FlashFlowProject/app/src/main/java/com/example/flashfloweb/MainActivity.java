@@ -65,13 +65,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v)  {
         switch (v.getId())
         {
             case R.id.btnConnect:
-                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connecting...");
+                try
+                {
+                    Thread.sleep(500);
+                }
+                catch(Exception e)
+                {
+
+                }
+                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connected");
                 buttonConnect.setEnabled(false);
                 break;
