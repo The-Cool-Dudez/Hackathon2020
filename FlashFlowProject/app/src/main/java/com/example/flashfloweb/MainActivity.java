@@ -17,6 +17,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
+
+    Button button1 = findViewById(R.id.btnConnect);
+    Button button2 = findViewById(R.id.btnUpload);
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -24,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button button1 = findViewById(R.id.btnConnect);
-        Button button2 = findViewById(R.id.btnUpload);
 
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
