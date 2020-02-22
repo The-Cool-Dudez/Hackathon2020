@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.btnConnect:
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-                buttonConnect.setText("Connecting...");
+                buttonConnect.setText("Connecting");
                 try
                 {
                     Thread.sleep(500);
