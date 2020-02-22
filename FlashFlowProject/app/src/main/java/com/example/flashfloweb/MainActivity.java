@@ -3,9 +3,6 @@ package com.example.flashfloweb;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -14,7 +11,6 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
@@ -22,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button buttonConnect;
     Button buttonUpload;
+    boolean connected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -75,15 +72,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Thread.sleep(500);
                 }
                 catch(Exception e)
-                {
-
-                }
+                {}
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connected");
+                connected = true;
                 buttonConnect.setEnabled(false);
                 break;
             case R.id.btnUpload:
-                startActivity(new Intent(MainActivity.this, uploadactivity.class));
+                if(connected)
+                {
+                    startActivity(new Intent(MainActivity.this, uploadactivity.class));
+                }
+                else
+                {
+                    buttonUpload.setText("Please connect.");
+                    try
+                    {
+                        Thread.sleep(5000);
+                    }
+                    catch(Exception e)
+                    {}
+                    buttonUpload.setText("Upload Image");
+                }
                 break;
         }
     }
