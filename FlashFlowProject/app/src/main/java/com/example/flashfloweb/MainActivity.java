@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button buttonConnect;
     Button buttonUpload;
-    boolean connected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -74,30 +73,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 {
                     Thread.sleep(500);
                 }
-                catch(Exception e)
+                catch(InterruptedException e)
                 {}
                 startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 buttonConnect.setText("Connected");
-                connected = true;
                 buttonConnect.setEnabled(false);
                 buttonUpload.setEnabled(true);
                 break;
             case R.id.btnUpload:
-                if(connected)
-                {
-                    startActivity(new Intent(MainActivity.this, uploadactivity.class));
-                }
-                else
-                {
-                    buttonUpload.setText("Please connect.");
-                    try
-                    {
-                        Thread.sleep(5000);
-                    }
-                    catch(Exception e)
-                    {}
-                    buttonUpload.setText("Upload Image");
-                }
+                startActivity(new Intent(MainActivity.this, uploadactivity.class));
                 break;
         }
     }
