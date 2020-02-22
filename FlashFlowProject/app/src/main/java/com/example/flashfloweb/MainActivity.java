@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonConnect = findViewById(R.id.btnConnect);
         buttonUpload = findViewById(R.id.btnUpload);
 
+        buttonConnect.setEnabled(true);
+        buttonUpload.setEnabled(false);
+
         buttonConnect.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
 
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonConnect.setText("Connected");
                 connected = true;
                 buttonConnect.setEnabled(false);
+                buttonUpload.setEnabled(true);
                 break;
             case R.id.btnUpload:
                 if(connected)
