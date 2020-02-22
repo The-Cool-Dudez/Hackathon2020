@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonConnect.setText("LOL");
                 break;
             case R.id.btnUpload:
-                buttonUpload.setText("LOL");
+                buttonUpload.setText("LULZ");
                 break;
         }
     }
