@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
@@ -60,11 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         switch (v.getId())
         {
-            case btnConnect:
-                btnConnect.Text = "LOL";
+            case R.id.btnConnect:
+                button1.setText("LOL");
                 break;
-            case btnUpload:
-                btnuUpload.Text = "LOL";
+            case R.id.btnUpload:
+                button2.setText("LOL");
                 break;
         }
     }
