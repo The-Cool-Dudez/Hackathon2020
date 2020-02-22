@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -96,8 +97,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 FlashAir flashair = new FlashAir();
                 try {
                     List<FATFile> files = flashair.getFileList(".");
+                    if  (files.isEmpty()) {
+                        Log.v("FILE", "none found");
+                        return;
+                    }
                     for (FATFile file: files) {
-                        System.out.println(file.getFileName());
+                        Log.v("FILE:", file.getFileName());
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
