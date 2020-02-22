@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 {
 
 
-    Button buttonConnect = findViewById(R.id.btnConnect);
-    Button buttonUpload = findViewById(R.id.btnUpload);
+    Button buttonConnect;
+    Button buttonUpload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        buttonConnect = findViewById(R.id.btnConnect);
+        buttonUpload = findViewById(R.id.btnUpload);
 
         buttonConnect.setOnClickListener(this);
         buttonUpload.setOnClickListener(this);
