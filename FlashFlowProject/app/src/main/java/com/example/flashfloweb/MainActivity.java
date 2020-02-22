@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnConnect:
-                startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+                startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
                 break;
             case R.id.btnUpload:
                 buttonUpload.setText("LULZ");
