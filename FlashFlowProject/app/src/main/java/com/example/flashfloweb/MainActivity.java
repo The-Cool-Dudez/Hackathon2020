@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonConnect.setEnabled(false);
                 break;
             case R.id.btnUpload:
+                startActivity(new Intent(MainActivity.this, uploadactivity.class));
                 break;
         }
     }
