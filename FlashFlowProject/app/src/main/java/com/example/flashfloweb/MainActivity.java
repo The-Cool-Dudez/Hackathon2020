@@ -87,6 +87,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonConnect.setEnabled(false);
                 buttonUpload.setEnabled(true);
                 connected = true;
+                break;
+            case R.id.btnUpload:
+                if (!connected) {
+                    return;
+                }
+                startActivity(new Intent(MainActivity.this, uploadactivity.class));
                 FlashAir flashair = new FlashAir();
                 try {
                     List<FATFile> files = flashair.getFileList(".");
@@ -96,12 +102,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                break;
-            case R.id.btnUpload:
-                if (!connected) {
-                    return;
-                }
-                startActivity(new Intent(MainActivity.this, uploadactivity.class));
                 connected = false;
                 break;
         }
