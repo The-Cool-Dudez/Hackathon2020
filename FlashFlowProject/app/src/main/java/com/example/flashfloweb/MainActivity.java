@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 {
 
 
-    Button button1 = findViewById(R.id.btnConnect);
-    Button button2 = findViewById(R.id.btnUpload);
+    Button buttonConnect = findViewById(R.id.btnConnect);
+    Button buttonUpload = findViewById(R.id.btnUpload);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
+        buttonConnect.setOnClickListener(this);
+        buttonUpload.setOnClickListener(this);
 
     }
 
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.btnConnect:
-                button1.setText("LOL");
+                buttonConnect.setText("LOL");
                 break;
             case R.id.btnUpload:
-                button2.setText("LOL");
+                buttonUpload.setText("LOL");
                 break;
         }
     }
