@@ -12,6 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.io.IOException;
+import java.util.List;
+
+import flashair.FATFile;
+import flashair.FlashAir;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
 
@@ -81,6 +87,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 buttonConnect.setEnabled(false);
                 buttonUpload.setEnabled(true);
                 connected = true;
+                FlashAir flashair = new FlashAir();
+                try {
+                    List<FATFile> files = flashair.getFileList(".");
+                    for (FATFile file: files) {
+                        System.out.println(file.getFileName());
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.btnUpload:
                 if (!connected) {
