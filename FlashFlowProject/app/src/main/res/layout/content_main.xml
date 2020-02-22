@@ -11,6 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Flash Flow"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,58 +22,65 @@
 
     <Button
         android:id="@+id/btnUpload"
-        android:layout_width="249dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="552dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginBottom="77dp"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="545dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="73dp"
         android:text="Upload Image"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
 
     <Button
         android:id="@+id/btnConnect"
-        android:layout_width="249dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="498dp"
-        android:layout_marginEnd="81dp"
+        android:layout_width="375dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="484dp"
+        android:layout_marginEnd="49dp"
         android:layout_marginBottom="131dp"
         android:text="Connect to Device"
-        android:textSize="14sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:text="By: Sutton Biddle, Jeremy Hertel, Zachary Hardin, and Jake Mitchell"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="126dp"
-        android:layout_marginBottom="467dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="425dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/appicon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="636dp"
+        android:layout_marginBottom="3dp"
+        android:text="By: Sutton Biddle, Jeremy Hertel, Zachary Hardin, and Jake Mitchell"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655"
-        app:srcCompat="@drawable/appicon" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
