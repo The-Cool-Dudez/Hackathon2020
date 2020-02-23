@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, uploadactivity.class));
                 FlashAir flashair = new FlashAir();
                 try {
-                    List<FATFile> files = flashair.getFileList(".");
+                    List<FATFile> files = flashair.getFileList("/");
                     if  (files.isEmpty()) {
                         Log.v("FILE", "none found");
                         return;
