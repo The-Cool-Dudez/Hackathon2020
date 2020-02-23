@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return;
                 }
                 startActivity(new Intent(MainActivity.this, uploadactivity.class));
+                /*
                 FlashAir flashair = new FlashAir();
                 try {
                     List<FATFile> files = flashair.getFileList(".");
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                 */
                 connected = false;
                 break;
         }
